@@ -11,6 +11,8 @@ app.controller("Controller1", function($scope, $http) {
 
   }).success(function(response) {
       alert('Success');
+      alert(response.input);
+      alert(response['input']);
   }).error(function(response) {
     alert('Error');
   });
