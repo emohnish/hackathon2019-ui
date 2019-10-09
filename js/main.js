@@ -25,10 +25,11 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
       headers: {'Content-Type': 'application/json;charset=UTF-8'}//,
       //data: { userName: $scope.loginpage.userName, password: $scope.loginpage.password}
    }).success(function(response) {
-        $scope.messageFromServer = response.response.my_api_output;
+        $scope.messageFromServer = response.response.authenticate;
         alert($scope.messageFromServer);
+        alert('AUthenticated from the server');
         //$window.location.href = '/dashboard.html';
-        //$location.path('/dashboard');
+        $location.path('/dashboard');
     }).error(function(response) {
       alert('Error');
     });
