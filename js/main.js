@@ -1,4 +1,4 @@
-var app = angular.module("Kerboresclan_UI", ['ngAnimate', 'ngTouch', 'ngRoute']);
+var app = angular.module("Kerboresclan_UI", ['ngAnimate', 'ngTouch', 'ngRoute', 'toastr']);
 
 app.config(['$locationProvider', '$routeProvider',
 
@@ -8,10 +8,14 @@ function config($locationProvider, $routeProvider)  {
     when('/dashboard', { template: '<dashboard-page></dashboard-page>'}).
     otherwise('/main');
 }
+]).config(function(toastrConfig) {
+  angular.extend(toastrConfig,  {
+    preventOpenDuplicates: true,
+    closeButton: true
+  })
+});
 
-]);
-
-app.controller("Controller1", function($scope, $http, $window, $location)  {
+app.controller("Controller1", function($scope, $http, $window, $location, toastr)  {
   $scope.message = "Hello, AngularJS";
   $scope.loginpage = {};	
 
@@ -29,6 +33,7 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
 
         if ($scope.authenticate == false) {
           alert('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
+          toastr.error('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
           return;
         }
 
