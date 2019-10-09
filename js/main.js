@@ -32,11 +32,11 @@ app.controller("Controller1", function($scope, $http, $window, $location, toastr
         //$window.location.href = '/dashboard.html';
 
         if ($scope.authenticate == false) {
-          alert('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
           toastr.error('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
           return;
         }
 
+        toastr.success('Authenticated Successfully. Navigating to Dashboard.');
         $location.path('/dashboard');
     }).error(function(response) {
       alert('Error');
