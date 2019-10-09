@@ -1,5 +1,14 @@
 var app = angular.module("Kerboresclan_UI", []);
 
+app.config(['$locationProvider', '$routeProvider',
+
+function config($locationProvider, $routeProvider)  {
+  $routeProvider.
+    when('/main', { template: '<main-page></main-page>'}).
+    otherwise('/main');
+}
+
+]);
 
 app.controller("Controller1", function($scope, $http, $window)  {
   $scope.message = "Hello, AngularJS";	
