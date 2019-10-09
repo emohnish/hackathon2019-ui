@@ -15,7 +15,10 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
   $scope.message = "Hello, AngularJS";
   $scope.loginpage = {};	
 
-  $scope.signIn = function() {\
+  $scope.signIn = function() {
+    alert($scope.loginpage.userName);
+    alert($scope.loginpage.password);
+
     $http({
       method: "GET",
       url: 'https://pythonflaskapp123.azurewebsites.net/login?userName=' + $scope.loginpage.userName + '&password=' + $scope.loginpage.password,
