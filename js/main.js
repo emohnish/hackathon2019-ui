@@ -20,10 +20,10 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
     alert($scope.loginpage.password);
 
     $http({
-      method: "POST",
-      url: 'https://pythonflaskapp123.azurewebsites.net/login',
-      headers: {'Content-Type': 'application/json;charset=UTF-8'},
-      data: { userName: $scope.loginpage.userName, password: $scope.loginpage.password }
+      method: "GET",
+      url: 'https://pythonflaskapp123.azurewebsites.net/login?userName=' + $scope.loginpage.userName + '&password=' + $scope.loginpage.password,
+      headers: {'Content-Type': 'application/json;charset=UTF-8'}//,
+      //data: { userName: $scope.loginpage.userName, password: $scope.loginpage.password}
    }).success(function(response) {
         $scope.messageFromServer = response.response.my_api_output;
         alert($scope.messageFromServer);
