@@ -3,3 +3,9 @@ app.directive('mainPage', function() {
         templateUrl: 'mainPage.html'
     };
 });
+
+app.directive('dashboardPage', function() {
+    return {
+        templateUrl: 'dashboard.html'
+    };
+});
