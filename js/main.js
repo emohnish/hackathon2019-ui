@@ -1,7 +1,7 @@
 var app = angular.module("Kerboresclan_UI", []);
 
 
-app.controller("Controller1", function($scope, $http) {
+app.controller("Controller1", function($scope, $http, $window)  {
   $scope.message = "Hello, AngularJS";	
 
   $http({
