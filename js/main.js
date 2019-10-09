@@ -14,6 +14,11 @@ function config($locationProvider, $routeProvider)  {
 app.controller("Controller1", function($scope, $http, $window, $location)  {
   $scope.message = "Hello, AngularJS";	
 
+  $scope.signIn = function() {
+    alert($scope.userName);
+    alert($scope.password);
+  }
+
   $http({
         method: "GET",
         url: 'https://pythonflaskapp123.azurewebsites.net/api?input=Mohnish',
