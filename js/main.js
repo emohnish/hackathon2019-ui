@@ -11,7 +11,7 @@ function config($locationProvider, $routeProvider)  {
 
 ]);
 
-app.controller("Controller1", function($scope, $http, $window)  {
+app.controller("Controller1", function($scope, $http, $window, $location)  {
   $scope.message = "Hello, AngularJS";	
 
   $http({
@@ -20,9 +20,10 @@ app.controller("Controller1", function($scope, $http, $window)  {
         headers: {'Content-Type': 'application/json;charset=UTF-8'}
 
   }).success(function(response) {
-      alert($scope.messageFromServer);
       $scope.messageFromServer = response.response.my_api_output;
+      alert($scope.messageFromServer);
       //$window.location.href = '/dashboard.html';
+      $location.path('/dashboard');
   }).error(function(response) {
     alert('Error');
   });
