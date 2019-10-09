@@ -12,11 +12,12 @@ function config($locationProvider, $routeProvider)  {
 ]);
 
 app.controller("Controller1", function($scope, $http, $window, $location)  {
-  $scope.message = "Hello, AngularJS";	
+  $scope.message = "Hello, AngularJS";
+  $scope.loginpage = {};	
 
   $scope.signIn = function() {
-    alert($scope.userName);
-    alert($scope.password);
+    alert($scope.loginpage.userName);
+    alert($scope.loginpage.password);
   }
 
   $http({
