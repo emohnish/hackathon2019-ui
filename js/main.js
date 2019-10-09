@@ -25,10 +25,15 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
       headers: {'Content-Type': 'application/json;charset=UTF-8'}//,
       //data: { userName: $scope.loginpage.userName, password: $scope.loginpage.password}
    }).success(function(response) {
-        $scope.messageFromServer = response.response.authenticate;
-        alert($scope.messageFromServer);
-        alert('AUthenticated from the server');
+        $scope.authenticate = response.response.authenticate;
+        alert('Message from server: ' + $scope.authenticate);
         //$window.location.href = '/dashboard.html';
+
+        if ($scope.authenticate == 'false') {
+          alert('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
+          return;
+        }
+
         $location.path('/dashboard');
     }).error(function(response) {
       alert('Error');
