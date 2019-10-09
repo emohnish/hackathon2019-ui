@@ -1,4 +1,4 @@
-var app = angular.module("Kerboresclan_UI", []);
+var app = angular.module("Kerboresclan_UI", ['ngAnimate', 'ngTouch', 'ngRoute']);
 
 app.config(['$locationProvider', '$routeProvider',
 
