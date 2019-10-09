@@ -29,7 +29,7 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
         alert('Message from server: ' + $scope.authenticate);
         //$window.location.href = '/dashboard.html';
 
-        if ($scope.authenticate == 'false') {
+        if ($scope.authenticate == false) {
           alert('Not Authenticated. Either UserName doesnt exist or Password is incorrect.');
           return;
         }
