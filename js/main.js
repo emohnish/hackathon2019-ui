@@ -18,21 +18,23 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
   $scope.signIn = function() {
     alert($scope.loginpage.userName);
     alert($scope.loginpage.password);
+
+    $http({
+      method: "POST",
+      url: 'https://pythonflaskapp123.azurewebsites.net/login',
+      headers: {'Content-Type': 'application/json;charset=UTF-8'},
+      data: { userName: $scope.loginpage.userName, password: $scope.loginpage.password }
+   }).success(function(response) {
+        $scope.messageFromServer = response.response.my_api_output;
+        alert($scope.messageFromServer);
+        //$window.location.href = '/dashboard.html';
+        //$location.path('/dashboard');
+    }).error(function(response) {
+      alert('Error');
+    });
   }
 
-  $http({
-        method: "GET",
-        url: 'https://pythonflaskapp123.azurewebsites.net/api?input=Mohnish',
-        headers: {'Content-Type': 'application/json;charset=UTF-8'}
-
-  }).success(function(response) {
-      $scope.messageFromServer = response.response.my_api_output;
-      alert($scope.messageFromServer);
-      //$window.location.href = '/dashboard.html';
-      //$location.path('/dashboard');
-  }).error(function(response) {
-    alert('Error');
-  });
+  
 
 
 }); 
