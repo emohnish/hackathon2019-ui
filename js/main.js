@@ -23,7 +23,7 @@ app.controller("Controller1", function($scope, $http, $window, $location)  {
       $scope.messageFromServer = response.response.my_api_output;
       alert($scope.messageFromServer);
       //$window.location.href = '/dashboard.html';
-      $location.path('/dashboard');
+      //$location.path('/dashboard');
   }).error(function(response) {
     alert('Error');
   });
