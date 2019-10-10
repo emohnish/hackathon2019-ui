@@ -16,7 +16,7 @@ function config($locationProvider, $routeProvider)  {
 });
 
 app.controller("Controller1", function($scope, $http, $window, $location, toastr)  {
-  $scope.message = "Hello, AngularJS. Version 4";
+  $scope.message = "Hello, AngularJS. Version 5";
   $scope.loginpage = {};	
 
   $scope.signIn = function() {
