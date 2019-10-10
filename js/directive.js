@@ -6,6 +6,6 @@ app.directive('mainPage', function() {
 
 app.directive('dashboardPage', function() {
     return {
-        templateUrl: 'dashboard2.html'
+        templateUrl: 'dashboard.html'
     };
 });
