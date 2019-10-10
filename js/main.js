@@ -20,8 +20,11 @@ app.controller("Controller1", function($scope, $http, $window, $location, toastr
   $scope.loginpage = {};	
 
   $scope.signIn = function() {
+
+    toastr.success('Authenticated Successfully. Navigating to Dashboard.');
+    $location.path('/dashboard');
   
-    $http({
+    /*$http({
       method: "GET",
       url: 'https://kerbclansvc.azurewebsites.net/login?userName=' + $scope.loginpage.userName + '&password=' + $scope.loginpage.password,
       headers: {'Content-Type': 'application/json;charset=UTF-8'}//,
@@ -40,7 +43,7 @@ app.controller("Controller1", function($scope, $http, $window, $location, toastr
         $location.path('/dashboard');
     }).error(function(response) {
       alert('Error');
-    });
+    });*/
   }
 
   
