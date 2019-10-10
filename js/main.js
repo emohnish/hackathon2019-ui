@@ -6,6 +6,9 @@ function config($locationProvider, $routeProvider)  {
   $routeProvider.
     when('/main', { template: '<main-page></main-page>'}).
     when('/dashboard', { template: '<dashboard-page></dashboard-page>'}).
+    when('/form', { template: '<form-page></form-page>'}).
+    when('/calendar', { template: '<calendar-page></calendar-page>'}).
+    when('/map', { template: '<map-page></map-page>'}).
     otherwise('/main');
 }
 ]).config(function(toastrConfig) {
