@@ -22,9 +22,14 @@
 <link href="vendor/mdi-font/css/material-design-iconic-font.min.css"
 	rel="stylesheet" media="all">
 
-<!-- Bootstrap CSS-->
-<link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet"
-	media="all">
+   <!-- Bootstrap CSS-->
+   <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet"
+		 media="all">
+   <!-- <link href="css/marketplace.css" rel="stylesheet"
+		 media="all"> -->
+   <!-- <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script> -->
+   <script src="vendor/jquery-3.2.1.min.js"></script>
+   <script src="vendor/slick/slick.min.js"></script>
 
 <!-- Vendor CSS-->
 <link href="vendor/animsition/animsition.min.css" rel="stylesheet"
@@ -43,6 +48,30 @@
 <!-- Main CSS-->
 <link href="css/theme.css" rel="stylesheet" media="all">
 
+<script>
+		$(document).ready(function(){
+			$('.customer-logos').slick({
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1500,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 4
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 3
+					}
+				}]
+			});
+		});
+	</script>
 </head>
 
 <body class="animsition" bgcolor="green">
@@ -361,7 +390,9 @@
 			<!-- HEADER DESKTOP-->
 
 			<!-- MAIN CONTENT-->
+			<!-- <div class="main-content" style = "background-image:url('images/earth_bg.jpeg');"> -->
 			<div class="main-content">
+			
 				<div class="section__content section__content--p30">
 					<div class="container-fluid">
 						<!-- <div class="row">
@@ -375,33 +406,57 @@
                                                         
                         </div> -->
 						<div class="row m-t-25">
-							<div class="col-sm-6 col-lg-3">
-								<div class="overview-item overview-item--c1">
+							<div class="col-sm-6 col-lg-3" style="height:200px;">
+								<div class="overview-item overview-item--c1" style="height:280px;">
 									<div class="overview__inner">
 										<div class="overview-box clearfix">
-											<div class="icon" style="height:130px;">
-												<i class="zmdi zmdi-account-o"></i>
-											</div>
+											<div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
 											<div class="text">
-												<h2>10368</h2>
-												<span>Brownie Points</span>
+												<h2>350,000</h2>
+												<span>Invested Value</span>
+											</div>
+											<div class="icon" style ="margin-top:20px;">  
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
+											<div class="text" style ="margin-top:20px;">
+												<h2>373,068</h2>
+												<span>Current Value</span>
+											</div>
+											<div class="icon" style ="margin-top:20px;">  
+                                                <i class="zmdi zmdi-long-arrow-up" style="color: lawnGreen"></i>
+                                            </div>
+											<div class="text" style ="margin-top:20px;color: lawnGreen;">
+												<h2>6.5%</h2>
+												<span>Percentage</span>
 											</div>
 										</div>
-										<div class="overview-chart">
+										<!-- <div class="overview-chart">
 											<canvas id="widgetChart1"></canvas>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
 
-							<div class="col-lg-6">
-                                <!-- <div class="au-card m-b-30">
+							<!-- <div class="col-lg-6" style="height:130px;">
+                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
                                         <h3 class="title-2 m-b-40">Peer Rank</h3>
                                         <canvas id="sales-chart"></canvas>
                                     </div>
-                                </div> -->
-                                <img src="images/baner.png" alt="John Smith">
+                                </div> 
+                                <img src="images/baner.png" alt="John Smith" style="height:280px;">
+                            </div> -->
+                            
+                            <div class="col-lg-6" style="height:130px;">
+                                 <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Portfolio Trend Analytics</h3>
+                                        <canvas id="sales-chart"></canvas>
+                                    </div>
+                                </div> 
+                                <!-- <img src="images/baner.png" alt="John Smith" style="height:280px;"> -->
                             </div>
                             
                             <div class="col-sm-6 col-lg-3">
@@ -948,66 +1003,78 @@
 					
 					
 					
-					 <div class="row">
+					 <div class="" style="margin-top:30px">
+					 <h5>Enery Saver Partners</h5>
+						<section class="customer-logos slider" style="background-color: #fff;">
+							<div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+							<div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+							<div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+						</section>
                              <!-- WELCOME-->
-            <section class="welcome p-t-10">
+           <!--  <section class="welcome p-t-10">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <h1 class="title-4">Partners
-                                <!-- <span></span> -->
+                                <span></span>
                             </h1>
                             <hr class="line-seprate">
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- END WELCOME-->
 
             <!-- STATISTIC-->
-            <section class="statistic statistic2">
+            <!-- <section class="statistic statistic2">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--green">
                             <img src="images/farmer_market.png" alt="DB HACK 2019" />
-                                <!-- <h2 class="number">Partner 1</h2>
-                                <span class="desc">e-Schooters</span> -->
-                                <!-- <div class="icon">
+                                <h2 class="number">Partner 1</h2>
+                                <span class="desc">e-Schooters</span>
+                                <div class="icon">
                                     <i class="zmdi zmdi-account-o"></i>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--orange">
                                 <h2 class="number">Partner 2</h2>
                                 <span class="desc">Green Hotel</span>
-                                <!-- <div class="icon">
+                                <div class="icon">
                                     <i class="zmdi zmdi-shopping-cart"></i>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--blue">
                                 <h2 class="number">Partner 3</h2>
                                 <span class="desc">this week</span>
-                                <!-- <div class="icon">
+                                <div class="icon">
                                     <i class="zmdi zmdi-calendar-note"></i>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="statistic__item statistic__item--red">
                                 <h2 class="number">Partner 4</h2>
                                 <span class="desc">total earnings</span>
-                                <!-- <div class="icon">
+                                <div class="icon">
                                     <i class="zmdi zmdi-money"></i>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
                                                         
                         </div> 
 					
