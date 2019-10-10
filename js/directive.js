@@ -1,11 +1,11 @@
 app.directive('mainPage', function() {
     return {
-        templateUrl: 'mainPage.html'
+        templateUrl: 'login.html'
     };
 });
 
 app.directive('dashboardPage', function() {
     return {
-        templateUrl: 'dashboard.html'
+        templateUrl: 'dashboard2.html'
     };
 });
