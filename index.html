@@ -35,7 +35,7 @@
 
 
 <script>
-    document.querySelector("#sbmit").onclick = function(){
+ function  onLogin(){
     	window.location.href = "dashboard.html";
     }; 
 </script>
@@ -70,7 +70,7 @@
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div>
-                                <button id="sbmit" class="au-btn au-btn--block au-btn--green m-b-20" type="submit" >sign in</button>
+                                <button id="sbmit" class="au-btn au-btn--block au-btn--green m-b-20" type="submit" onclick="onLogin()">sign in</button>
                                 <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
