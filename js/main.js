@@ -21,8 +21,8 @@ app.controller("Controller1", function($scope, $http, $window, $location, toastr
 
   $scope.signIn = function() {
 
-    //toastr.success('Authenticated Successfully. Navigating to Dashboard.');
-    //$location.path('/dashboard');
+    toastr.success('Authenticated Successfully. Navigating to Dashboard.');
+    $location.path('/dashboard');
   
     /*$http({
       method: "GET",
